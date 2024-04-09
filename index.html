@@ -55,7 +55,9 @@
               ></i>
             </button>
           </div>
-          <div class="col p-2"></div>
+          <div v-for="(repo,i) in contacts" :key="i" class="col p-2">
+            {{repo.login}}
+          </div>
         </div>
       </div>
     </div>

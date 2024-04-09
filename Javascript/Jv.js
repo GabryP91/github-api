@@ -29,9 +29,10 @@ createApp({
         };
 
         axios
-          .get("https://api.github.com/endpoint", data)
+          .get("https://api.github.com/users", data)
           .then((response) => {
             console.log(response.data);
+            this.contacts = response.data;
           })
           .catch((error) => {
             console.error("Errore durante la richiesta API:", error);
